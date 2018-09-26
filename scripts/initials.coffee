@@ -20,7 +20,7 @@ module.exports = (robot) ->
         return user
     return null
 
-  robot.respond /initials add ([A-Z]{3}) ([0-9]{2}) @?([a-z0-9_\-]+)$/, (res) ->
+  robot.respond /initials add ([A-Z]{3}) ([0-9]{2}) @?([a-z0-9_\-\.]+)$/, (res) ->
     initials = res.match[1].toUpperCase()
     year = parseInt(res.match[2])
     slack_name = res.match[3]
